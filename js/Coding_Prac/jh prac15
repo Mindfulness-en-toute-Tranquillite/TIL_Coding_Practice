@@ -1,0 +1,41 @@
+//프로그래밍 기초문제 15.내적
+//https://school.programmers.co.kr/learn/courses/30/lessons/70128
+
+
+// //배열 2개. 각 배열 곱하고 더한 값 (a[0] * b[0] + a[1] * b[1] + n길이 만큼)
+// a[1,2,3,4]
+// b[-3,-1,0,2]
+// result 3
+
+// 0.반복문 받을 식 만들기
+// 1.반복문 사용해서 a[i] *b[i] 해주기
+// 2.a[i]*b[i]를 n만큼 더하기.
+
+
+//풀이
+function solution(a, b) {
+    var answer = 0;
+    for(let i = 0; i < n.length; i++ ) { //n은 여기서 컴퓨터가 알 수 있을까??
+        answer = a[i] * b[i]
+    }
+    
+    return answer;
+}
+//에러나서 다시 풀이1
+function solution(a, b) {
+    var answer = 0;
+    for(let i = 0; i < a.length; i++ ) { //n을 바꿔줌. a만큼 반복해줘야니까
+        answer = a[i] * b[i]
+    }
+    
+    return answer;
+}
+//에러나서 다시.
+function solution(a, b) {
+    var answer = 0;
+    for(let i = 0; i < a.length; i++ ) { 
+        answer += a[i] * b[i] //+=을 빼먹음. 더한값에 계속 중첩으로 더해져야되니까.
+    }
+    
+    return answer;
+}
